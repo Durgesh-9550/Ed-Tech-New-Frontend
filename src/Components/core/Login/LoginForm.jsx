@@ -11,29 +11,33 @@ const LoginForm = () => {
     const navigate = useNavigate();
     const { login } = useContext(AuthContext);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
 
-        if (!email || !password) {
-            toast.error("Please fill up all the required fields");
-            return;
-        }
+    //     if (!email || !password) {
+    //         toast.error("Please fill up all the required fields");
+    //         return;
+    //     }
 
-        try {
-            const res = await axiosInstance.post("/auth/login", {
-                email,
-                password,
-            });
+    //     try {
+    //         const res = await axiosInstance.post("/auth/login", {
+    //             email,
+    //             password,
+    //         });
 
-            const { token, user } = res.data;
+    //         const { token, user } = res.data;
 
-            // Call login function to update context state
-            login(token, user);
-        } catch (err) {
-            console.error("Error response:", err.response);
-            toast.error(err.response?.data?.message || "Invalid Credentials");
-        }
-    };
+    //         // Call login function to update context state
+    //         login(token, user);
+    //     } catch (err) {
+    //         console.error("Error response:", err.response);
+    //         toast.error(err.response?.data?.message || "Invalid Credentials");
+    //     }
+    // };
+
+    const handleSubmit = () => {
+        navigate("https://www.elevatemyskill.online/order")
+    }
 
     return (
         <div className="min-h-screen flex flex-col md:flex-row mt-12">
