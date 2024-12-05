@@ -5,7 +5,7 @@ import inferno from "../assests/courses/inferno.png";
 const coursesData = [
   {
     id: 1,
-    name: "Blaze",
+    name: "Ignite",
     description: "For College Students",
     highlights: [
       "Lifetime Access",
@@ -19,7 +19,7 @@ const coursesData = [
   },
   {
     id: 2,
-    name: "Ignite",
+    name: "Blaze",
     description: "For Working Professionals",
     highlights: [
       "Lifetime Access",
