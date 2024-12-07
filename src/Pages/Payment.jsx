@@ -28,7 +28,7 @@ const Payment = () => {
             trasactionId: "tranEMS" + Date.now(),
         }
 
-        await axios.post("https://elevatemyskill.onrender.com/order", data)
+        await axios.post("https://elevatemyskill.onrender.com/api/v1/payment/order", data)
             .then((res) => {
                 // Check if the response structure is as expected
                 if (res?.data?.data?.instrumentResponse?.redirectInfo?.url) {
