@@ -30,14 +30,26 @@ const Payment = () => {
 
         await axios.post("https://elevatemyskill.onrender.com/order", data)
             .then((res) => {
-                // if (res.data && res.data.data.instrumentResponse.redirectInfo.url) {
-                //     window.location.href = res.data.data.instrumentResponse.redirectInfo.url;
-                // }
-                console.log(res.data)
-            }
-            ).catch((error) => {
-                console.log(error)
+                // Check if the response structure is as expected
+                if (res?.data?.data?.instrumentResponse?.redirectInfo?.url) {
+                    window.location.href = res.data.data.instrumentResponse.redirectInfo.url;
+                } else {
+                    console.error("Unexpected response format:", res);
+                }
             })
+            .catch((error) => {
+                // Enhanced error logging
+                if (error.response) {
+                    // Server responded with a status code outside the 2xx range
+                    console.error("Error response data:", error.response.data);
+                } else if (error.request) {
+                    // Request was made but no response was received
+                    console.error("No response received:", error.request);
+                } else {
+                    // Something went wrong in setting up the request
+                    console.error("Error during setup:", error.message);
+                }
+            });
     }
 
     return (
