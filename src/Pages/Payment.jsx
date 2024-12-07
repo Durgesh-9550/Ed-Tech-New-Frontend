@@ -30,15 +30,14 @@ const Payment = () => {
 
         await axios.post("https://elevatemyskill.onrender.com/order", data)
             .then((res) => {
-                if (res.data && res.data.data.instrumentResponse.redirectInfo.url) {
-                    window.location.href = res.data.data.instrumentResponse.redirectInfo.url;
-                } else {
-                    console.error("Unexpected response format:", res.data);
-                }
+                // if (res.data && res.data.data.instrumentResponse.redirectInfo.url) {
+                //     window.location.href = res.data.data.instrumentResponse.redirectInfo.url;
+                // }
+                console.log(res.data)
+            }
+            ).catch((error) => {
+                console.log(error)
             })
-            .catch((error) => {
-                console.error("Error during API call:", error.response?.data || error.message);
-            });
     }
 
     return (

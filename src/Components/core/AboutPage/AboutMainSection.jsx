@@ -4,9 +4,9 @@ const AboutMainSection = () => {
     return (
         <div className="w-screen bg-gray-50 text-gray-800 py-12 px-6 flex flex-col justify-center items-center overflow-x-hidden">
             <div className="max-w-[90%] lg:max-w-[50%] flex flex-col justify-center items-center text-center">
-                <h1 className="text-4xl font-bold mb-4 text-gray-900 w-full">
+                {/* <h1 className="text-4xl font-bold mb-4 text-gray-900 w-full">
                     My Story
-                </h1>
+                </h1> */}
                 <div className="w-full flex justify-center items-center">
                     <img className="rounded-lg mt-6 sm:mt-10 w-full max-w-[400px] md:max-w-full" src={img} alt="About Main Img" />
                 </div>
