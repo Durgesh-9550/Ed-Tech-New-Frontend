@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaYoutube, FaInstagram, FaQuora } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import footerData from "../../data/footer-data";
 import logo from '../../assests/navbar/logo.png'
 import { Link } from "react-router-dom";
@@ -8,7 +9,7 @@ const Footer = () => {
         <footer className="bg-blue-900 text-white py-10 px-8">
             <div className="max-w-7xl mx-auto">
                 {/* Main Sections */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div className="flex flex-col md:flex-row justify-between gap-8 mb-8">
                     {/* Logo and Description */}
                     <div>
                         <Link to="/">
@@ -18,7 +19,7 @@ const Footer = () => {
                                 className="h-8"
                             />
                         </Link>
-                        <p className="text-sm  mt-2">{footerData.description}</p>
+                        <p className="md:w-[40%] text-sm  mt-2">{footerData.description}</p>
                     </div>
 
                     {/* Footer Links */}
@@ -54,7 +55,7 @@ const Footer = () => {
                     {/* Social Media Icons */}
                     <div className="flex gap-4">
                         <a
-                            href="https://linkedin.com"
+                            href="https://www.linkedin.com/company/elevate-my-skill/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-300 hover:text-white text-2xl"
@@ -62,7 +63,7 @@ const Footer = () => {
                             <FaLinkedin />
                         </a>
                         <a
-                            href="https://youtube.com"
+                            href="https://www.youtube.com/@ems_grow"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-300 hover:text-white text-2xl"
@@ -70,21 +71,21 @@ const Footer = () => {
                             <FaYoutube />
                         </a>
                         <a
-                            href="https://instagram.com"
+                            href="https://x.com/ems_grow"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-300 hover:text-white text-2xl"
                         >
-                            <FaInstagram />
+                            <FaXTwitter />
                         </a>
-                        <a
+                        {/* <a
                             href="https://quora.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-300 hover:text-white text-2xl"
                         >
                             <FaQuora />
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </div>
