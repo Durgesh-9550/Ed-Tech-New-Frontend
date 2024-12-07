@@ -28,16 +28,17 @@ const Payment = () => {
             trasactionId: "tranEMS" + Date.now(),
         }
 
-        await axios.post("https://elevatemyskill.onrender.com/order", data)
+        await axios.post("http://localhost:8000/order", data)
             .then((res) => {
-                // console.log(res.data)
                 if (res.data && res.data.data.instrumentResponse.redirectInfo.url) {
                     window.location.href = res.data.data.instrumentResponse.redirectInfo.url;
+                } else {
+                    console.error("Unexpected response format:", res.data);
                 }
-            }
-            ).catch((error) => {
-                console.log(error)
             })
+            .catch((error) => {
+                console.error("Error during API call:", error.response?.data || error.message);
+            });
     }
 
     return (

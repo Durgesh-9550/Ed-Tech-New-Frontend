@@ -1,135 +1,160 @@
-import React from 'react'
+import React from "react";
 
-const PrivacyPolicyMain = () => {
+const PrivacyPolicy = () => {
     return (
-        <div class="bg-gray-50 text-gray-800 py-12 px-6 sm:px-12 lg:px-24">
-            <div class="max-w-5xl mx-auto">
-                {/* <!-- Page Heading --> */}
-                <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-6">
-                    Terms and Conditions
-                </h1>
-                <p class="text-center text-md text-gray-700">
-                    Last updated: November 21, 2024
+        <div className="bg-gray-50 min-h-screen py-10">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col justify-center items-center">
+                    <h1 className="text-4xl font-bold text-gray-800 mb-6">Privacy Policy</h1>
+                    <p className="text-lg text-gray-800 mb-6">Privacy Policy for CMV TECHNOLOGIES INTERNATIONAL PVT LTD</p>
+                    <p className="text-gray-600 text-sm">Last updated: November 21, 2024</p>
+                </div>
+                <p className="mt-4 text-gray-700 leading-relaxed">
+                    This Privacy Policy describes our policies and procedures regarding
+                    the collection, use, and disclosure of your information when you use
+                    the Service. It also tells you about your privacy rights and how the
+                    law protects you.
+                </p>
+                <p className="mt-2 text-gray-700">
+                    By using the Service, you agree to the collection and use of
+                    information in accordance with this Privacy Policy.
                 </p>
 
-                {/* <!-- Intro Section --> */}
-                <div class="mt-8 text-gray-700 space-y-4">
-                    <p>
-                        These Terms and Conditions govern your use of the Service provided by CMV TECHNOLOGIES INTERNATIONAL PVT LTD. Please read them carefully before using Our Service.
-                    </p>
-                    <p>
-                        By accessing or using the Service, You agree to these Terms and Conditions. If You disagree with any part, please stop using the Service.
-                    </p>
-                </div>
+                <h2 className="text-2xl font-semibold text-gray-800 mt-8">
+                    Definitions
+                </h2>
+                <ul className="mt-4 list-disc list-inside text-gray-700 space-y-2">
+                    <li>
+                        <strong>Company:</strong> CMV TECHNOLOGIES INTERNATIONAL PVT LTD,
+                        C-3/139, SK-2, Indirapuram, Ghaziabad, UP-201014.
+                    </li>
+                    <li>
+                        <strong>Cookies:</strong> Small files placed on your device that
+                        store browsing history and other information.
+                    </li>
+                    <li>
+                        <strong>Country:</strong> Uttar Pradesh, India.
+                    </li>
+                    <li>
+                        <strong>Device:</strong> Any device that can access the Service,
+                        such as a computer, cellphone, or tablet.
+                    </li>
+                    <li>
+                        <strong>Service:</strong> Refers to the Website, CMV TECHNOLOGIES
+                        INTERNATIONAL PVT LTD, accessible from{" "}
+                        <a
+                            href="https://www.elevatemyskill.com/"
+                            className="text-blue-500 hover:underline"
+                        >
+                            https://www.elevatemyskill.com/
+                        </a>
+                        .
+                    </li>
+                </ul>
 
-                {/* <!-- Definitions Section --> */}
-                <div class="mt-12">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">
-                        Definitions
-                    </h2>
-                    <ul class="list-disc list-inside mt-4 space-y-2 text-gray-700">
-                        <li><strong>Country:</strong> Uttar Pradesh, India</li>
-                        <li><strong>Company:</strong> CMV TECHNOLOGIES INTERNATIONAL PVT LTD, C-3/139, SK-2, Indirapuram, Ghaziabad, UP-201014</li>
-                        <li><strong>Device:</strong> Any device capable of accessing the Service, such as computers, cellphones, or tablets</li>
-                        <li><strong>Service:</strong> Refers to the Website</li>
-                        <li><strong>Website:</strong> Accessible from <a href="https://www.elevatemyskill.com/" class="text-blue-600 hover:underline">https://www.elevatemyskill.com/</a></li>
-                    </ul>
-                </div>
+                <h2 className="text-2xl font-semibold text-gray-800 mt-8">
+                    Collecting and Using Your Personal Data
+                </h2>
+                <h3 className="text-xl font-semibold text-gray-700 mt-6">
+                    Types of Data Collected
+                </h3>
+                <p className="mt-4 text-gray-700 leading-relaxed">
+                    <strong>Personal Data:</strong> Includes your email, name, phone
+                    number, address, and other identifiable information.
+                </p>
+                <p className="mt-2 text-gray-700">
+                    <strong>Usage Data:</strong> Automatically collected data such as IP
+                    address, browser type, visited pages, and device identifiers.
+                </p>
 
-                {/* <!-- Acknowledgment Section --> */}
-                <div class="mt-12">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">
-                        Acknowledgment
-                    </h2>
-                    <p class="text-md text-gray-700 leading-relaxed">
-                        By using the Service, you agree to comply with these Terms. These Terms outline your rights and obligations while using the Service.
-                    </p>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-700 mt-6">
+                    Tracking Technologies and Cookies
+                </h3>
+                <p className="mt-4 text-gray-700 leading-relaxed">
+                    We use Cookies and similar technologies to track activity and store
+                    information to improve the Service. You can adjust your browser
+                    settings to refuse cookies.
+                </p>
 
-                {/* <!-- Links to Other Websites --> */}
-                <div class="mt-12">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">
-                        Links to Other Websites
-                    </h2>
-                    <p class="text-md text-gray-700 leading-relaxed">
-                        Our Service may include links to third-party websites. The Company has no control over their content, policies, or practices. We recommend reviewing their terms and privacy policies.
-                    </p>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-700 mt-6">
+                    Use of Your Personal Data
+                </h3>
+                <ul className="mt-4 list-disc list-inside text-gray-700 space-y-2">
+                    <li>To provide and maintain the Service.</li>
+                    <li>To manage your account and registration.</li>
+                    <li>To contact you regarding updates and offers.</li>
+                    <li>To manage requests and provide support.</li>
+                    <li>For analytics, business transfers, and improving the Service.</li>
+                </ul>
 
-                {/* <!-- Termination Section --> */}
-                <div class="mt-12">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">
-                        Termination
-                    </h2>
-                    <p class="text-md text-gray-700 leading-relaxed">
-                        The Company may terminate your access to the Service without prior notice if you breach these Terms.
-                    </p>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-700 mt-6">
+                    Retention of Your Personal Data
+                </h3>
+                <p className="mt-4 text-gray-700 leading-relaxed">
+                    We retain your data as long as necessary to fulfill the purposes in
+                    this Privacy Policy, comply with legal obligations, resolve disputes,
+                    and enforce agreements.
+                </p>
 
-                {/* <!-- Limitation of Liability --> */}
-                <div class="mt-12">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">
-                        Limitation of Liability
-                    </h2>
-                    <p class="text-md text-gray-700 leading-relaxed">
-                        The Company is not liable for any incidental, indirect, or consequential damages, to the extent permitted by applicable law.
-                    </p>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-700 mt-6">
+                    Security of Your Personal Data
+                </h3>
+                <p className="mt-4 text-gray-700 leading-relaxed">
+                    We use commercially acceptable means to protect your data but cannot
+                    guarantee absolute security.
+                </p>
 
-                {/* <!-- Governing Law -->/ */}
-                <div class="mt-12">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">
-                        Governing Law
-                    </h2>
-                    <p class="text-md text-gray-700 leading-relaxed">
-                        These Terms are governed by the laws of Uttar Pradesh, India, without regard to conflict of law provisions.
-                    </p>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-700 mt-6">
+                    Children's Privacy
+                </h3>
+                <p className="mt-4 text-gray-700 leading-relaxed">
+                    Our Service does not knowingly collect data from children under 13.
+                    Parents can contact us to remove such data if collected inadvertently.
+                </p>
 
-                {/* <!-- Dispute Resolution --> */}
-                <div class="mt-12">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">
-                        Dispute Resolution
-                    </h2>
-                    <p class="text-md text-gray-700 leading-relaxed">
-                        In case of any disputes, you agree to resolve them informally by contacting the Company first.
-                    </p>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-700 mt-6">
+                    Links to Other Websites
+                </h3>
+                <p className="mt-4 text-gray-700 leading-relaxed">
+                    Our Service may link to external websites. We are not responsible for
+                    their content or privacy practices.
+                </p>
 
-                {/* <!-- Severability and Waiver --> */}
-                <div class="mt-12">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">
-                        Severability and Waiver
-                    </h2>
-                    <p class="text-md text-gray-700 leading-relaxed">
-                        If any provision of these Terms is deemed invalid, other provisions will remain enforceable.
-                    </p>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-700 mt-6">
+                    Changes to this Privacy Policy
+                </h3>
+                <p className="mt-4 text-gray-700 leading-relaxed">
+                    We may update this Privacy Policy periodically. Changes will be
+                    effective upon posting on this page, with a new "Last updated" date.
+                </p>
 
-                {/* <!-- Changes to Terms --> */}
-                <div class="mt-12">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">
-                        Changes to These Terms
-                    </h2>
-                    <p class="text-md text-gray-700 leading-relaxed">
-                        We reserve the right to update these Terms. By continuing to use the Service after changes take effect, you agree to the updated Terms.
-                    </p>
-                </div>
-
-                {/* <!-- Contact Section --> */}
-                <div class="mt-12 text-center">
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">
-                        Contact Us
-                    </h3>
-                    <p class="text-md text-gray-700">
-                        If you have any questions about these Terms, visit our website:
-                        <a href="https://www.elevatemyskill.com/" class="text-blue-600 hover:underline">https://www.elevatemyskill.com/</a>
-                    </p>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-700 mt-6">Contact Us</h3>
+                <p className="mt-4 text-gray-700">
+                    If you have questions about this Privacy Policy, contact us at:
+                </p>
+                <ul className="mt-4 space-y-2 text-gray-700">
+                    <li>
+                        Email:{" "}
+                        <a
+                            href="mailto:admin@elevatemyskill.online"
+                            className="text-blue-500 hover:underline"
+                        >
+                            admin@elevatemyskill.online
+                        </a>
+                    </li>
+                    <li>
+                        Website:{" "}
+                        <a
+                            href="https://www.elevatemyskill.com/"
+                            className="text-blue-500 hover:underline"
+                        >
+                            https://www.elevatemyskill.com/
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
+    );
+};
 
-    )
-}
-
-export default PrivacyPolicyMain
+export default PrivacyPolicy;

@@ -2,7 +2,8 @@ import axios from "axios";
 
 // Create an instance of Axios with a base URL
 const axiosInstance = axios.create({
-  baseURL: "https://elevatemyskill.onrender.com/api/v1", // Base URL for API requests
+  // baseURL: "https://elevatemyskill.onrender.com/api/v1", // Base URL for API requests
+  baseURL: "http://localhost:8000/api/v1", // Base URL for API requests
 });
 
 axiosInstance.interceptors.request.use(

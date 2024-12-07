@@ -7,8 +7,8 @@ import Dashboard from "./Pages/Dashboard";
 import Payment from './Pages/Payment'
 import About from "./Pages/About";
 import RefundPolicy from "./Pages/RefundPolicy";
-import { TermsAndConditions } from "./Pages/TermsAndConditions";
-import PrivacyPolicyMain from "./Components/core/PrivacyPolicyPage/PrivacyPolicyMain";
+import TermsAndConditions from "./Pages/TermsAndConditions";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
       <Route path="/about-us" element={<About />} />
       <Route path="/refund-policy" element={<RefundPolicy />} />
       <Route path="/terms-and-condition" element={<TermsAndConditions />} />
-      <Route path="/privacy-policy" element={<PrivacyPolicyMain />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
     </Routes>
   );
 };
