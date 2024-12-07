@@ -28,7 +28,7 @@ const Payment = () => {
             trasactionId: "tranEMS" + Date.now(),
         }
 
-        await axios.post("http://localhost:8000/order", data)
+        await axios.post("https://elevatemyskill.onrender.com/order", data)
             .then((res) => {
                 if (res.data && res.data.data.instrumentResponse.redirectInfo.url) {
                     window.location.href = res.data.data.instrumentResponse.redirectInfo.url;
