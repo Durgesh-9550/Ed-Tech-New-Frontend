@@ -16,40 +16,51 @@ const Payment = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Handle Submit Called")
-        console.log(name, mobile, amount)
+        console.log("Handle Submit Called");
+        console.log(name, mobile, amount);
 
         setLoading(true);
+
         const data = {
             name: name,
             mobile,
             amount,
             MUID: "MUIDEMS" + Date.now(),
             trasactionId: "tranEMS" + Date.now(),
+        };
+        console.log("Just Before Try in Handle Submit Function")
+        try {
+            console.log("First Inside Try in Handle Submit Function")
+            const res = await axios.post("https://elevatemyskill.onrender.com/api/v1/payment/order", data);
+
+            // Check if the response structure is as expected
+            if (res?.data?.data?.instrumentResponse?.redirectInfo?.url) {
+                window.location.href = res.data.data.instrumentResponse.redirectInfo.url;
+                console.log("Second Inside Try in Handle Submit Function")
+            } else {
+                console.error("Unexpected response format:", res);
+                console.log("Third Inside Try in Handle Submit Function")
+            }
+        } catch (error) {
+            // Enhanced error logging
+            if (error.response) {
+                // Server responded with a status code outside the 2xx range
+                console.error("Error response data:", error.response.data);
+                console.log("4th Inside Try in Handle Submit Function")
+            } else if (error.request) {
+                // Request was made but no response was received
+                console.error("No response received:", error.request);
+                console.log("5th Inside Try in Handle Submit Function")
+            } else {
+                // Something went wrong in setting up the request
+                console.error("Error during setup:", error.message);
+                console.log("6th Inside Try in Handle Submit Function")
+            }
+        } finally {
+            setLoading(false); // Ensure loading is stopped after the operation completes
+            console.log("7th Inside Try in Handle Submit Function")
         }
 
-        await axios.post("https://elevatemyskill.onrender.com/api/v1/payment/order", data)
-            .then((res) => {
-                // Check if the response structure is as expected
-                if (res?.data?.data?.instrumentResponse?.redirectInfo?.url) {
-                    window.location.href = res.data.data.instrumentResponse.redirectInfo.url;
-                } else {
-                    console.error("Unexpected response format:", res);
-                }
-            })
-            .catch((error) => {
-                // Enhanced error logging
-                if (error.response) {
-                    // Server responded with a status code outside the 2xx range
-                    console.error("Error response data:", error.response.data);
-                } else if (error.request) {
-                    // Request was made but no response was received
-                    console.error("No response received:", error.request);
-                } else {
-                    // Something went wrong in setting up the request
-                    console.error("Error during setup:", error.message);
-                }
-            });
     }
 
     return (
