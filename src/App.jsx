@@ -10,6 +10,8 @@ import RefundPolicy from "./Pages/RefundPolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import NotFound from "./Pages/NotFound";
+import PaymentSuccess from "./Components/core/Payment/PaymentSuccess";
+import PaymentFailure from "./Components/core/Payment/PaymentFailure";
 
 const App = () => {
   return (
@@ -24,6 +26,8 @@ const App = () => {
       <Route path="/terms-and-condition" element={<TermsAndConditions />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="*" element={<NotFound />} />
+      <Route path="/payment/success" element={<PaymentSuccess />} />
+      <Route path="/payment/failure" element={<PaymentFailure />} />
     </Routes>
   );
 };

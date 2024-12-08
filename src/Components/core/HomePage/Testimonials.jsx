@@ -50,9 +50,9 @@ const Testimonials = () => {
     <div className="bg-gray-50 py-16 px-4 sm:px-8">
       <div className="max-w-7xl mx-auto text-center">
         {/* Section Title */}
-        <h4 className="text-sm font-semibold uppercase tracking-wide text-gray-500 mb-2">
+        {/* <h4 className="text-sm font-semibold uppercase tracking-wide text-gray-500 mb-2">
           Reviews
-        </h4>
+        </h4> */}
         <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
           What our students say
         </h2>

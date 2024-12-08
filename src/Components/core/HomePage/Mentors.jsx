@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import mentorsData from "../../../data/mentors-data";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import { FaArrowLeft, FaArrowRight, FaLinkedin } from "react-icons/fa6";
 
 const Mentors = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -57,18 +57,33 @@ const Mentors = () => {
                 {visibleMentors.map((mentor) => (
                     <div
                         key={mentor.id}
-                        className="bg-white border border-gray-300 shadow-lg w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[419px] h-auto rounded-lg p-6 flex flex-col items-center"
+                        className="bg-white border border-gray-300 shadow-lg w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[419px] h-auto rounded-lg p-6 flex flex-col items-center relative"
                     >
                         {/* Mentor Image */}
-                        <img
-                            src={mentor.image}
-                            alt={mentor.name}
-                            className="w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] rounded-full object-cover mb-4"
-                        />
+                        <div className="relative">
+                            <img
+                                src={mentor.image}
+                                alt={mentor.name}
+                                className="w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] rounded-full object-cover mb-4"
+                            />
+                            {/* LinkedIn Icon */}
+                            <a
+                                href={mentor.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="absolute bottom-4 right-6 bg-blue-600 p-2 rounded-full text-white hover:bg-blue-700 transition-all"
+                                title={`Connect with ${mentor.name} on LinkedIn`}
+                            >
+                                <FaLinkedin size={20} />
+                            </a>
+                        </div>
                         {/* Mentor Name */}
                         <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-blue-600 mt-4 text-center">
                             {mentor.name}
                         </h3>
+                        <p className="text-sm text-center text-gray-500 mt-2 -mb-4">
+                            {mentor.position}
+                        </p>
                         {/* Mentor Company Logo */}
                         <div className="flex items-center mt-6">
                             <img
