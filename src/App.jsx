@@ -9,6 +9,7 @@ import About from "./Pages/About";
 import RefundPolicy from "./Pages/RefundPolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import NotFound from "./Pages/NotFound";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Route path="/refund-policy" element={<RefundPolicy />} />
       <Route path="/terms-and-condition" element={<TermsAndConditions />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
