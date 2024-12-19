@@ -12,6 +12,9 @@ import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import NotFound from "./Pages/NotFound";
 import PaymentSuccess from "./Components/core/Payment/PaymentSuccess";
 import PaymentFailure from "./Components/core/Payment/PaymentFailure";
+import Contact from "./Pages/Contact";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const App = () => {
   return (
@@ -22,6 +25,7 @@ const App = () => {
       <Route path="/Dashboard" element={<Dashboard />} />
       <Route path="/payment" element={<Payment />} />
       <Route path="/about-us" element={<About />} />
+      <Route path="/contact-us" element={<Contact />} />
       <Route path="/refund-policy" element={<RefundPolicy />} />
       <Route path="/terms-and-condition" element={<TermsAndConditions />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />

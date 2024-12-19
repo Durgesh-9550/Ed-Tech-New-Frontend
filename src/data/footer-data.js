@@ -7,6 +7,7 @@ const footerData = {
       title: "Company",
       links: [
         { label: "About Us", url: "/about-us" },
+        { label: "Contact Us", url: "/contact-us" },
         { label: "Refund Policy", url: "/refund-policy" },
         // { label: "Blogs", url: "/blogs" },
         { label: "Privacy Policy", url: "/privacy-policy" },

@@ -6,6 +6,7 @@ import Mentors from '../Components/core/HomePage/Mentors';
 import Testimonials from '../Components/core/HomePage/Testimonials';
 import FAQ from '../Components/core/HomePage/FAQ';
 import Footer from '../Components/common/Footer';
+import CompaniesSlider from '../Components/core/HomePage/CompaniesSlider';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Navbar />
             <HeroSection />
             <Courses />
+            <CompaniesSlider />
             <Mentors />
             <Testimonials />
             <FAQ />
