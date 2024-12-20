@@ -25,17 +25,17 @@ const Navbar = () => {
                     Home
                 </Link>
 
-                <Link to="/courses" className="text-gray-800 p-2 text-sm sm:text-base lg:text-lg font-open-sauce hover:text-blue-600">
+                {/* <Link to="/courses" className="text-gray-800 p-2 text-sm sm:text-base lg:text-lg font-open-sauce hover:text-blue-600">
                     Courses
-                </Link>
+                </Link> */}
 
                 <Link to="/about-us" className="text-gray-800 p-2 text-sm sm:text-base lg:text-lg font-open-sauce hover:text-blue-600">
                     About Us
                 </Link>
 
-                {/* <Link to="/contact-us" className="text-gray-800 p-2 text-sm sm:text-base lg:text-lg font-open-sauce hover:text-blue-600">
+                <Link to="/contact-us" className="text-gray-800 p-2 text-sm sm:text-base lg:text-lg font-open-sauce hover:text-blue-600">
                     Contact Us
-                </Link> */}
+                </Link>
 
                 <button
                     onClick={() => navigate("/login")}
