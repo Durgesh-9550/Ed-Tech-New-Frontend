@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HiPhone, HiMail, HiUser, HiPencil } from "react-icons/hi";
 import axiosInstance from "../../../apis/axiosInstance";
+import countryCodeData from "../../../data/contry_code_data.json"; 
 
 const ContactUsForm = () => {
   const [formData, setFormData] = useState({
@@ -9,26 +10,35 @@ const ContactUsForm = () => {
     phoneno: "",
     message: "",
   });
-
   const [statusMessage, setStatusMessage] = useState("");
+  const [countryCode, setCountryCode] = useState("+91"); // Default to India (+91)
+  
+  // To load country data
+  const [countryList, setCountryList] = useState([]);
+
+  useEffect(() => {
+    // Initialize country list from countryCodeData
+    setCountryList(countryCodeData);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleCountryChange = (e) => {
+    setCountryCode(e.target.value); // Update the selected country code
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // console.log("Form Data: ", formData)
-      const response_receive = await axiosInstance.post(
-        "/receive-contact",
-        formData
-      );
-      const response_send = await axiosInstance.post(
-        "/send-response",
-        formData
-      );
+      // Add the country code to the phone number
+      const updatedFormData = { ...formData, phoneno: countryCode + formData.phoneno };
+
+      const response_receive = await axiosInstance.post("/receive-contact", updatedFormData);
+      const response_send = await axiosInstance.post("/send-response", updatedFormData);
+      
       setStatusMessage(
         (response_receive.data.message && response_send.data.message) ||
           "Message sent successfully"
@@ -51,7 +61,6 @@ const ContactUsForm = () => {
       <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 bg-transparent">
         {/* Left Section */}
         <div className="text-white">
-          {/* <h4 className="text-sm font-medium tracking-widest uppercase mb-4">About Us</h4> */}
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
             Empowering Minds, Shaping Futures
           </h2>
@@ -63,20 +72,20 @@ const ContactUsForm = () => {
             we shape learners into future-ready professionals, one step at a
             time.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             {/* Call Us */}
             <div className="flex items-center space-x-4">
               <div className="bg-white/10 p-3 rounded-full">
                 <HiPhone className="w-6 h-6 text-white" />
               </div>
-              <span className="text-white font-semibold">+49 8802626464</span>
+              <span className="text-white font-semibold">+91-9266516675</span>
             </div>
             {/* Email */}
             <div className="flex items-center space-x-4">
               <div className="bg-white/10 p-3 rounded-full">
                 <HiMail className="w-6 h-6 text-white" />
               </div>
-              <span className="text-white font-semibold">info@sorted.io</span>
+              <span className="text-white font-semibold">help@elevatemyskill.com</span>
             </div>
           </div>
         </div>
@@ -115,15 +124,28 @@ const ContactUsForm = () => {
             </div>
 
             {/* Phone Number */}
-            <div className="relative">
-              <HiPhone className="absolute left-3 top-3 text-gray-400 w-5 h-5" />
+            <div className="relative flex gap-1 items-center">
+              {/* Country Code Dropdown */}
+              <select
+                className="flex-shrink-0 pl-4 pr-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-600 w-1/3"
+                value={countryCode}
+                onChange={handleCountryChange}
+              >
+                {countryList.map((country) => (
+                  <option key={country.code} value={country.code}>
+                    {country.code} - {country.country}
+                  </option>
+                ))}
+              </select>
+
+              {/* Phone Input */}
               <input
                 required
                 type="text"
                 name="phoneno"
                 id="phoneno"
                 placeholder="Phone Number"
-                className="w-full pl-10 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="w-3/4 pl-4 pr-4 py-2 border border-gray-300 rounded-r-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                 onChange={handleChange}
               />
             </div>

@@ -25,9 +25,9 @@ const Navbar = () => {
                     Home
                 </Link>
 
-                {/* <Link to="/courses" className="text-gray-800 p-2 text-sm sm:text-base lg:text-lg font-open-sauce hover:text-blue-600">
+                <Link to="/courses" className="text-gray-800 p-2 text-sm sm:text-base lg:text-lg font-open-sauce hover:text-blue-600">
                     Courses
-                </Link> */}
+                </Link>
 
                 <Link to="/about-us" className="text-gray-800 p-2 text-sm sm:text-base lg:text-lg font-open-sauce hover:text-blue-600">
                     About Us
@@ -82,13 +82,13 @@ const Navbar = () => {
                         >
                             About Us
                         </Link>
-                        {/* <Link
+                        <Link
                             to="/contact-us"
                             className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             Contact Us
-                        </Link> */}
+                        </Link>
                         <button
                             onClick={() => {
                                 navigate("/login");

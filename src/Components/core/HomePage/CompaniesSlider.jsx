@@ -55,7 +55,7 @@ const CompaniesSlider = () => {
                 <Slider {...sliderSettings} className="left-slider" rtl={false}>
                     {[...leftImages, ...leftImages].map((image, index) => (
                         <div key={index}>
-                            <img src={image} alt={`Company Left ${index}`} className="w-[120px] h-[40px] md:w-[150px] md:h-[50px] lg:w-[200px] lg:h-[60px] mx-2 object-contain" />
+                            <img src={image} alt={`Company Left ${index}`} className="w-[40px] h-[40px] md:w-[80px] md:h-[50px] lg:w-[120px] lg:h-[60px] mx-2 object-contain" />
                         </div>
                     ))}
                 </Slider>
@@ -65,7 +65,7 @@ const CompaniesSlider = () => {
                 <Slider {...sliderSettings} className="right-slider" rtl={true}>
                     {[...rightImages, ...rightImages].map((image, index) => (
                         <div key={index}>
-                            <img src={image} alt={`Company Right ${index}`} className="w-[120px] h-[40px] md:w-[150px] md:h-[50px] lg:w-[200px] lg:h-[60px] mx-2 object-contain" />
+                            <img src={image} alt={`Company Right ${index}`} className="w-[40px] h-[40px] md:w-[80px] md:h-[50px] lg:w-[120px] lg:h-[60px] mx-2 object-contain" />
                         </div>
                     ))}
                 </Slider>
