@@ -15,6 +15,7 @@ import PaymentFailure from "./Components/core/Payment/PaymentFailure";
 import Contact from "./Pages/Contact";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import CourseDetails from "./Pages/CourseDetails";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
       <Route path="*" element={<NotFound />} />
       <Route path="/payment/success" element={<PaymentSuccess />} />
       <Route path="/payment/failure" element={<PaymentFailure />} />
+      <Route path="/course/:courseName" element={<CourseDetails />} />
     </Routes>
   );
 };

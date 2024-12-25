@@ -1,9 +1,10 @@
 import React from "react";
 import coursesData from "../../../data/courses-data";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Course = () => {
     const navigate = useNavigate();
+    const courseId = useParams();
 
     const handleBuyNow = () => {
         navigate('/payment');
@@ -59,10 +60,11 @@ const Course = () => {
                         {/* Buy Now Button */}
                         <div>
                             <button
-                                onClick={handleBuyNow}
+                                key={course.id}
+                                onClick={() => navigate(`/course/${course.name}`)}
                                 className="h-12 sm:h-[60px] bg-gradient-to-r from-[#00349C] via-[#00349C] to-[#0651E8] text-white w-full py-2 rounded-b-lg hover:opacity-90 text-sm sm:text-base"
                             >
-                                Buy Now
+                                Learn More...
                             </button>
                         </div>
                     </div>
