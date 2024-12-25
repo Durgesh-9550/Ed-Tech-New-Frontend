@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import logo from "../../../assests/navbar/logo.png";
-import { useNavigate } from "react-router-dom";
 import AuthContext from "../../../context/AuthContext";
 import axiosInstance from "../../../apis/axiosInstance";
 import toast, { Toaster } from "react-hot-toast";
@@ -8,7 +7,6 @@ import toast, { Toaster } from "react-hot-toast";
 const LoginForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const navigate = useNavigate();
     const { login } = useContext(AuthContext);
 
     const handleSubmit = async (e) => {
